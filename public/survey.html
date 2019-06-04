@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Values</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/styles.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper white">
+            <a id="logo" href="./home.html" class="brand-logo pacifico red-text">
+                <i class="material-icons">favorite</i>Lasting Love</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger red-text">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="./home.html" class="red-text">Home</a></li>
+                <li><a href="./survey.html" class="red-text">Survey</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="./home.html" class="red-text">Home</a></li>
+        <li><a href="./survey.html" class="red-text">Survey</a></li>
+    </ul>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <h2>Your Basic info</h2>
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="icon_prefix" type="text" class="validate">
+                            <label for="icon_prefix">Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="text" class="validate">
+                            <label for="email">Link to Profile Pic</label>
+                        </div>
+                    </div>
+                    <div class="input-field col s6">
+                        <select>
+                            <option value="" disabled selected>I identify as a...</option>
+                            <option value="1">Male</option>
+                            <option value="2">Female</option>
+                            <option value="3">Other</option>
+                        </select>
+                        <label>What gender do you identify with?</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <select>
+                            <option value="" disabled selected>I am looking for a...</option>
+                            <option value="1">Male</option>
+                            <option value="2">Female</option>
+                            <option value="3">Both</option>
+                        </select>
+                        <label>What gender are you looking for?</label>
+                    </div>
+
+                    <h2>Questions</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>I don't know</td>
+                                <td>I don't care</td>
+                                <td>I somewhat care</td>
+                                <td>I care</td>
+                                <td>This is a must</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="range-field">
+                        1. I am looking for a mate with the same religious beliefs as me.
+                        <input type="range" id="test1" min="1" max="5" />
+                    </p>
+                    <p class="range-field">
+                        2. I am looking for a mate with the same political beliefs as me.
+                        <input type="range" id="test2" min="1" max="5" />
+                    </p>
+                    <p class="range-field">
+                        3. I am looking for a mate who wants to get married.
+                        <input type="range" id="test3" min="1" max="5" />
+                    </p>
+                    <p class="range-field">
+                        4. I am looking for a mate who wants to have children.
+                        <input type="range" id="test4" min="1" max="5" />
+                    </p>
+                    <p class="range-field">
+                        5. I am looking for a mate whose native language is the same as mine.
+                        <input type="range" id="test5" min="1" max="5" />
+                    </p>
+                    <p class="range-field">
+                        6. I want a mate who is okay with smoking cigarettes.
+                        <input type="range" id="test6" min="1" max="5" />
+                    </p>
+                    <p class="range-field">
+                        7. I want a mate who is okay with smoking marijuana.
+                        <input type="range" id="test7" min="1" max="5" />
+                    </p>
+                    <p class="range-field">
+                        8. I want a mate who is okay with drinking alcohol recreationally.
+                        <input type="range" id="test8" min="1" max="5" />
+                    </p>
+                    <p class="range-field">
+                        9. I want a mate who wants to move around a lot.
+                        <input type="range" id="test9" min="1" max="5" />
+                    </p>
+                    <p class="range-field">
+                        10. I want a mate who likes spending time indoors moreso than outdoors.
+                        <input type="range" id="test10" min="1" max="5" />
+                    </p>
+
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <br>
+    <br>
+
+    <footer class="page-footer red">
+        <div class="container">
+            <div class="row">
+                <div class="col l4 offset-l2 s12">
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2019 Copyright Text
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./assets/javascript/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./assets/javascript/app.js"></script>
+</body>
+</html>
