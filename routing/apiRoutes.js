@@ -1,5 +1,18 @@
 // Your apiRoutes.js file should contain two routes:
+const profiles = require('../app/data/profiles.js');
 
+module.exports = function (app) {
+    app.get('/api/profiles', (req,res) => {
+        return res.json(profiles);
+    });
+
+    app.post('/api/profiles', (req,res) => {
+        function findMatch(newProfile) {
+            console.log(newProfile); 
+        }
+    }
+)
+}
 
 
 // A GET route with the url /api/friends. This will be used to display a JSON of all possible friends.

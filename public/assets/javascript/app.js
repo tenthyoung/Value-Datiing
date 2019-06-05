@@ -26,6 +26,10 @@ $(document).ready(function () {
         }
 
         $.post("api/profile", newProfile)
-        .then
+            .then(data => {
+                console.log(data);
+                $('#matchedName').text(data.name);
+                $('#matchedImage').attr('src', data.photo);
+            })
     })
 });
