@@ -9,8 +9,15 @@ module.exports = function (app) {
     app.post('/api/profiles', (req,res) => {
         function findMatch(newProfile) {
             console.log(newProfile); 
+            return profiles[0];
         }
+        let newProfile = req.body;
+        let bestMatch = findMatch(newProfile);
+        profiles.push(newProfile);
+        res.json(bestMatch);
     }
+
+
 )
 }
 
