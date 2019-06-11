@@ -6,7 +6,9 @@ module.exports = function (app) {
         return res.json(profiles);
     });
 
-    app.post('/api/profiles', (req,res) => {
+    // app.post('/api/profiles', (req,res) => {
+    app.post('/survey.html', (req,res) => {
+        console.log('hi')
         function findMatch(newProfile) {
             console.log(newProfile); 
             return profiles[0];
