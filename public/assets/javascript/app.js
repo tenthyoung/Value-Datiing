@@ -25,7 +25,7 @@ $(document).ready(function () {
             ]
         }
 
-        $.post("api/profile", newProfile)
+        $.post("/api/profiles", newProfile)
             .then(data => {
                 console.log(data);
                 $('#matchedName').text(data.name);

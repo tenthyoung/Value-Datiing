@@ -6,9 +6,7 @@ module.exports = function (app) {
         return res.json(profiles);
     });
 
-    // app.post('/api/profiles', (req,res) => {
-    app.post('/survey.html', (req,res) => {
-        console.log('hi')
+    app.post('/api/profiles', (req,res) => {
         function findMatch(newProfile) {
             console.log(newProfile); 
             return profiles[0];
@@ -17,10 +15,8 @@ module.exports = function (app) {
         let bestMatch = findMatch(newProfile);
         profiles.push(newProfile);
         res.json(bestMatch);
-    }
-
-
-)
+    });
+    
 }
 
 
