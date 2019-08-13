@@ -13,8 +13,32 @@ app.use(express.urlencoded({ extended: true })); // this is the %20
 app.use(express.json());
 app.use(express.static(path.join(__dirname,'public')));
 
-require('./routing/apiroutes')(app);
-require('./routing/htmlroutes')(app);
+// require('./routing/apiroutes')(app);
+// require('./routing/htmlroutes')(app);
+
+app.get('/api/profiles', (req,res) => {
+  return res.json(profiles);
+});
+
+app.post('/api/profiles', (req,res) => {
+  function findMatch(newProfile) {
+      console.log(newProfile); 
+      return profiles[0];
+  }
+  let newProfile = req.body;
+  let bestMatch = findMatch(newProfile);
+  profiles.push(newProfile);
+  res.json(bestMatch);
+});
+
+app.get('/survey.html', (req,res) => {
+  res.sendFile(path.join(__dirname, '../public/survey.html'));
+
+});
+
+app.get('*', (req,res) => res.sendFile(path.join(__dirname, '../public/home.html')));
+
+
 
 // if the server doesn't get a response from any other of 
 // the middleware functions, it'll send this
