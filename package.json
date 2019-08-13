@@ -1,6 +1,10 @@
 {
   "name": "friend-finder",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.16.2",
+    "npm": "6.9.0"
+  },
   "description": "",
   "main": ".js",
   "scripts": {

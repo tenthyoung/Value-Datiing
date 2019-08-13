@@ -8,5 +8,4 @@ Improve your chances of finding a match who shares the same values as you.  Ente
 -Materialize CSS
 -Javascript
 -jQuery
--Handlebars JS
 -Express JS
