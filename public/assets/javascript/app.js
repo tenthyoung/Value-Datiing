@@ -1,7 +1,5 @@
 $(document).ready(function () {
-    $('.sidenav').sidenav();
-    $('select').formSelect();
-    $('.modal').modal();
+    M.AutoInit();
 
     $("#submit-survey").on("click", (event) => {
         event.preventDefault();
